@@ -3,3 +3,8 @@ c:\users\greg\documents\visual studio 2010\Projects\ConsoleApplication1\ConsoleA
 c:\users\greg\documents\visual studio 2010\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
 c:\users\greg\documents\visual studio 2010\Projects\ConsoleApplication1\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.exe
 c:\users\greg\documents\visual studio 2010\Projects\ConsoleApplication1\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.pdb
+C:\Visual Studio 2010\C# iphone backup\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.exe
+C:\Visual Studio 2010\C# iphone backup\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.pdb
+C:\Visual Studio 2010\C# iphone backup\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Visual Studio 2010\C# iphone backup\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Visual Studio 2010\C# iphone backup\ConsoleApplication1\obj\x86\Debug\ResolveAssemblyReference.cache
