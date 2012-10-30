@@ -12,8 +12,12 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
+            List<string> backup_paths = new List<string>();
+            //Break this into a separate function
             SelectQuery query = new SelectQuery("Win32_UserAccount");
             ManagementObjectSearcher searcher = new ManagementObjectSearcher(query);
+            
+            //Break this into a separate function
             foreach (ManagementObject envVar in searcher.Get())
             {
                  Console.WriteLine("Username : {0}", envVar["Name"]);
@@ -24,9 +28,11 @@ namespace ConsoleApplication1
                     DirectoryInfo di = new DirectoryInfo(dirname);
                     DirectoryInfo[] dirinfo = di.GetDirectories();
                     foreach (DirectoryInfo item in dirinfo)
-
+                    {
+                        backup_paths.Add(item.FullName);
                         Console.WriteLine(item.FullName);
-                    
+                        Console.WriteLine(backup_paths[0]);
+                    }
 
                 }
                  Console.ReadKey(true);
