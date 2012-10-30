@@ -31,7 +31,12 @@ namespace ConsoleApplication1
                     {
                         backup_paths.Add(item.FullName);
                         Console.WriteLine(item.FullName);
-                        Console.WriteLine(backup_paths[0]);
+                        //Console.WriteLine(backup_paths[0]);
+                        foreach (FileInfo f in item.GetFiles())
+                        {
+                            Console.WriteLine(f.FullName);
+                        }
+
                     }
 
                 }
