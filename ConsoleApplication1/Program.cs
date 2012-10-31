@@ -14,15 +14,28 @@ namespace ConsoleApplication1
         static void Main(string[] args)
         {
             string userpath;
+            string appdata;
+
+            //put targetpath creation in its own function
+            string targetPath = @"C:\" + (System.Guid.NewGuid().ToString("D"));
+
+            // To copy a folder's contents to a new location: 
+            // Create a new target folder, if necessary. 
+            if (!System.IO.Directory.Exists(targetPath))
+            {
+                System.IO.Directory.CreateDirectory(targetPath);
+            }
             GetOSinfo osdetector = new GetOSinfo();
             Console.WriteLine(osdetector.getOSInfo());
             if ((osdetector.getOSInfo()).Contains("Windows 7"))
             {
                 userpath = "C:\\Users\\";
+                appdata = "\\AppData\\Roaming\\";
             }
             else
             {
                 userpath = "C:\\Documents and Settings\\";
+                appdata = "\\Application Data\\";
             }
 
             List<string> backup_paths = new List<string>();
@@ -32,7 +45,7 @@ namespace ConsoleApplication1
             {
                 {
                     Console.WriteLine("Username : {0}", user);
-                    String dirname = "C:\\Users\\" + user + "\\AppData\\Roaming\\Apple Computer\\MobileSync\\Backup";
+                    String dirname = userpath + user + appdata + "Apple Computer\\MobileSync\\Backup";
                     if (Directory.Exists(dirname))
                     {
                         Console.WriteLine("{0} has iPhone backups", user
@@ -60,17 +73,11 @@ namespace ConsoleApplication1
                                     //copy JPGs into folder
                                     string fileName = f.Name + ".jpg";
 
-                                    string targetPath = @"C:\Iphone pics\";
 
                                     // Use Path class to manipulate file and directory paths. 
                                     string destFile = System.IO.Path.Combine(targetPath, fileName);
 
-                                    // To copy a folder's contents to a new location: 
-                                    // Create a new target folder, if necessary. 
-                                    if (!System.IO.Directory.Exists(targetPath))
-                                    {
-                                        System.IO.Directory.CreateDirectory(targetPath);
-                                    }
+                                   
 
                                     // To copy a file to another location and  
                                     // overwrite the destination file if it already exists.
@@ -86,7 +93,7 @@ namespace ConsoleApplication1
                         }
 
                     }
-                    Console.ReadKey(true);
+                    //Console.ReadKey(true);
 
                 }
             }
