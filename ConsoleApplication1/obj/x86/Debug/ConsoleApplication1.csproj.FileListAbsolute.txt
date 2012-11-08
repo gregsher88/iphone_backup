@@ -8,3 +8,9 @@ C:\Visual Studio 2010\C# iphone backup\ConsoleApplication1\obj\x86\Debug\Console
 C:\Visual Studio 2010\C# iphone backup\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
 C:\Visual Studio 2010\C# iphone backup\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
 C:\Visual Studio 2010\C# iphone backup\ConsoleApplication1\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Visual Studio 2010\C# iphone backup - local\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.exe
+C:\Visual Studio 2010\C# iphone backup - local\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.pdb
+C:\Visual Studio 2010\C# iphone backup - local\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Visual Studio 2010\C# iphone backup - local\ConsoleApplication1\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Visual Studio 2010\C# iphone backup - local\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Visual Studio 2010\C# iphone backup - local\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
