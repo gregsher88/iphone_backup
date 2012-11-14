@@ -50,7 +50,7 @@ namespace ConsoleApplication1
             }
             GetOSinfo osdetector = new GetOSinfo();
             Console.WriteLine(osdetector.getOSInfo());
-            if ((osdetector.getOSInfo()).Contains("Windows 7"))
+            if ((osdetector.getOSInfo()).Contains("Windows 7") || (osdetector.getOSInfo()).Contains("Vista")) 
             {
                 userpath = "C:\\Users\\";
                 appdata = "\\AppData\\Roaming\\";
